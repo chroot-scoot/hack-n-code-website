@@ -1,6 +1,6 @@
 name: Commitlint
 
-on: [push, pull_request]
+on: pull_request
 
 jobs:
   commitlint:
@@ -9,13 +9,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Install required dependencies
-        run: |
-          apt update
-          apt install -y sudo
-          sudo apt install -y git curl
-          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-          sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: lts/irons
       - name: Print versions
         run: |
           git --version
