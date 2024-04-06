@@ -7,7 +7,6 @@
     "vite.config.ts",
     "playwright.config.ts",
     "playwright-ct.config.ts",
-    "tailwind.config.ts",
-    "postcss.config.ts"
+    "tailwind.config.ts"
   ]
 }
