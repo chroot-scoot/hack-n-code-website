@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["src"],
+  "exclude": ["tests", "src/**/*.test.{ts,tsx}", "src/**/*.spec.{ts,tsx}"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
